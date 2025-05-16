@@ -1,0 +1,26 @@
+[project]
+name = "aisearch-mcp-server"
+version = "1.0.0"
+description = "A MCP Server for Aliyun AI Search"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+ "mcp[cli]>=1.5.0",
+ "python-dotenv>=1.0.1",
+ "alibabacloud_searchplat20240529>=2.0.0"
+# "alibabacloud_credentials==1.0rc4"
+]
+[[project.authors]]
+name = "Mengcheng Chen"
+email = "bestcmc@163.com"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[[tool.uv.index]]
+url = "https://mirrors.aliyun.com/pypi/simple/"
+default = true
+
+[project.scripts]
+aisearch-mcp-server = "aisearch_mcp_server:main"
